@@ -9,6 +9,17 @@ Live for the lab at [annotate.shark-id.org](https://annotate.shark-id.org).
 > taking, and you are welcome to build your own on them; please credit Daniel Sambold if
 > you do.
 
+## Collaborate
+
+I am looking for collaborators. What needs work:
+
+- **Evidence for the consensus thresholds.** The geometric consensus settings came from spectrogram tuning, not shark data; they need an inter-rater study on real scars.
+- **Catching shared misses.** Agreement cannot see a scar nobody marked; only expert answer keys can. More expert-labelled frames needed.
+- **3D scar pin repeatability.** The pin on the shark model needs a repeatability study before it can be used for consensus.
+- **Other labs and species** with scar or mark photo archives.
+
+Interested? [Open an issue](https://github.com/dbold23/shark-scar-annotator-skeleton/issues/new) or message me on [LinkedIn](https://www.linkedin.com/in/daniel-sambold-620b37221).
+
 ![The annotation flywheel](docs/flywheel.svg)
 
 The lab has footage from four California sites (Aptos, Año Nuevo, Point Reyes, the
