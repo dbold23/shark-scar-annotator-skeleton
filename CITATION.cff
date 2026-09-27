@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If this project informs your work, please cite it using this metadata."
+title: "Shark Scar Annotator: multi-rater annotation of scars, pose and shape on white shark footage"
+type: software
+authors:
+  - family-names: Sambold
+    given-names: Daniel
+    affiliation: "California State University, Monterey Bay"
+    orcid: "https://orcid.org/0009-0003-7810-650X"
+keywords:
+  - "annotation"
+  - "white shark"
+  - "scars"
+  - "inter-rater agreement"
+  - "computer vision"
+repository-code: "https://github.com/dbold23/shark-scar-annotator-skeleton"
