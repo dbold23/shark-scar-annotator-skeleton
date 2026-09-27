@@ -1,0 +1,45 @@
+flask>=2.3.0,<4.0
+flask-cors>=4.0.0,<5.0
+opencv-python>=4.8.0,<5.0
+numpy>=1.24.0,<3.0
+Pillow>=10.0.0,<12.0
+PyYAML>=6.0,<7.0
+PyJWT>=2.8.0,<3.0
+gunicorn>=21.2.0,<24.0
+flask-limiter>=3.5.0,<4.0
+
+# Google services (optional — needed for OAuth and Drive)
+google-auth>=2.23.0,<3.0
+google-auth-oauthlib>=1.1.0,<2.0
+google-api-python-client>=2.100.0,<3.0
+
+# SAM2 segmentation (optional — large download, GPU recommended)
+# transformers>=4.35.0
+# torch>=2.0.0
+
+# SAM2 video propagation (Phase 1 tracks — optional, uses Meta sam2 reference repo,
+# distinct from HF transformers Sam2Model used for image-only prompted segmentation)
+# sam2>=1.0.0          # install from https://github.com/facebookresearch/sam2
+pycocotools>=2.0.7
+
+# Phase 2 — pose-derived zone/side hints (uses Ultralytics YOLOv8-pose).
+# Optional: if not installed, the propagation worker logs a warning and skips
+# pose hints; Phase 1 (best-frame, auto-color) keeps working unchanged.
+ultralytics>=8.0.0,<9.0
+
+# Stream A re-ID embeddings (Phase A1 — optional, OFF by default via reid.embeddings.enabled).
+# Lazy-loaded only when re-ID signatures are enabled; weights cached under models/reid/.
+# Not installed by default (kept out-of-band like SAM2, to avoid bloating the OFF deploy).
+# Install the stack for your chosen reid.embeddings.model:
+#   torch>=2.0.0            # also pulled in by ultralytics
+#   timm>=1.0.0            # MiewID-msv3 + MegaDescriptor (hf-hub loaders)
+#   transformers>=4.35.0   # DINOv2, and MiewID via trust_remote_code
+#   wildlife-tools>=0.1.0  # WildFusion local-feature matchers (LoFTR/LightGlue) — used at match time in A2
+
+# Phase B1 (mlops label quality) — OPTIONAL, CPU-only. cleanlab CROWDLAB computes
+# multi-rater track consensus + per-annotator quality + per-example trust over
+# track_verifications. If absent, annotation/label_quality.py silently falls back
+# to the pure-Python weighted-vote aggregation (no numpy/pandas needed there).
+# Pulls numpy/scipy/scikit-learn/pandas — uncomment to enable mlops.label_quality.
+# cleanlab>=2.6.0,<3.0
+# pandas>=1.5,<3.0
