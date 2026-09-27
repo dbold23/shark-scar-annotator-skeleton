@@ -3,11 +3,11 @@
 Multi-rater annotation of scars, pose and shape on twenty years of white shark footage.
 Live for the lab at [annotate.shark-id.org](https://annotate.shark-id.org).
 
-> **This is a skeleton.** It is the real module layout, class and function signatures and
-> docstrings of a private research codebase, with every function body replaced by `...`
-> and all data, weights, configuration and credentials left out. It shows how the system
-> is built; it does not run. The full code is private while the work is prepared for
-> publication. Copyright Daniel Sambold, all rights reserved.
+> **Skeleton.** The app is live for the lab; this is its real module layout, signatures
+> and docstrings, with every function body replaced by `...` and all data, credentials and
+> the front end left out. It does not run, but the design notes below are the part worth
+> taking, and you are welcome to build your own on them; please credit Daniel Sambold if
+> you do.
 
 ![The annotation flywheel](docs/flywheel.svg)
 
